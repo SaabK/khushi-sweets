@@ -1,6 +1,10 @@
 .header {
-    background: black;
+    width: 100%;
     padding-block: 0.5rem;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    background: linear-gradient(black, transparent);
 }
 
 .shoppingCart {

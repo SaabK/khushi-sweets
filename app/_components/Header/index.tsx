@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./Header.module.css";
 import shoppingCart from "../../assets/Shopping Cart.svg";
 
 export default function Header() {
     return (
-        <header className={`${styles.header}`}>
+        <header className="header">
             <div className="container flex-f">
-                <div className={`${styles.shoppingCart} hidden`}>
+                <div className={`shoppingCart hidden`}>
                     <Image src={shoppingCart} alt="" width={30} height={30} />
                 </div>
 
@@ -20,7 +19,7 @@ export default function Header() {
                     />
                 </div>
 
-                <div className={`${styles.shoppingCart}`}>
+                <div className={`shoppingCart`}>
                     <Image src={shoppingCart} alt="" width={30} height={30} />
                 </div>
             </div>
