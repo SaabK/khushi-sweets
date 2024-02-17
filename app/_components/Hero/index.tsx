@@ -13,8 +13,8 @@ function Hero() {
                         <Image
                             src="/barfi.jpg"
                             alt="Khushi ki Barfi"
-                            width={450}
-                            height={450}
+                            width={430}
+                            height={430}
                             className="featuredProduct__image"
                         />
                     </div>
