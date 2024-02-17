@@ -10,12 +10,11 @@ export default function Header() {
                     <Image src={shoppingCart} alt="" width={30} height={30} />
                 </div>
 
-                <div className={`logo`}>
+                <div className={`logo image`}>
                     <Image
                         src="/khushi sweets logo urdu.png"
                         alt="Khushi Sweets"
-                        width={300}
-                        height={70}
+                        fill
                     />
                 </div>
 

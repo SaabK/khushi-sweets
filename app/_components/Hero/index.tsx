@@ -9,12 +9,11 @@ function Hero() {
         <section className="background hero ">
             <div className="container">
                 <article className="featuredProduct">
-                    <div>
+                    <div className="image">
                         <Image
                             src="/barfi.jpg"
                             alt="Khushi ki Barfi"
-                            width={430}
-                            height={430}
+                            fill
                             className="featuredProduct__image"
                         />
                     </div>

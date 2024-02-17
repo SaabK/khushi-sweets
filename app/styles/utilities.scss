@@ -15,6 +15,7 @@
 
 .btn {
     border-radius: 4px;
+    font-size: 1.15rem;
     padding: 0.65rem 2rem;
     // padding: 0.75rem 2.65rem;
     transition: all 0.3s ease-in;
@@ -158,5 +159,36 @@
         font-weight: 700;
         text-transform: uppercase;
         padding-inline: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 500px;
+        width: 92.5%;
+    }
+
+    .background {
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .btn {
+        padding: 0.45rem 1.25rem;
+        font-size: 0.8rem;
+    }
+
+    .weight button {
+        font-size: 0.975rem;
+        padding: 0.4rem;
+    }
+
+    .weight > *:first-child {
+        order: 2;
     }
 }
