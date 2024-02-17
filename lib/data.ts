@@ -38,3 +38,21 @@ export const testimonials = [
         text: "Very tasty and delicious sweets here, especially the Burfi and Gulab Jamun. It is not only famous in Pakistan for their sweets but also famous outside the Pakistan.  If you ever get a chance to visit mian channu, then you will surely want to taste their delicious barfi.",
     },
 ];
+
+export const socials = [
+    {
+        name: "facebook",
+        href: "https://www.facebook.com/ksmianchannu/",
+        icon: "/facebook.svg",
+    },
+    {
+        name: "instagram",
+        href: "https://www.instagram.com",
+        icon: "/instagram.svg",
+    },
+    {
+        name: "whatsapp",
+        href: "https://web.whatsapp.com/",
+        icon: "/whatsapp.svg",
+    },
+];

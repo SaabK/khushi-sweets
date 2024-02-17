@@ -9,3 +9,9 @@ export interface Testimonial {
     image: string;
     text: string;
 }
+
+export interface Social {
+    name: string;
+    href: string;
+    icon: string;
+}

@@ -223,3 +223,34 @@ button:focus {
 .testimonial:last-child {
     grid-column: 2 / 4;
 }
+
+// Footer
+
+footer {
+    background: black;
+    padding: 0.75rem 2rem;
+
+    .image {
+        height: 3.5rem;
+        width: 11.5rem;
+    }
+
+    ul {
+        display: flex;
+        gap: 0.75rem;
+
+        svg {
+            display: block;
+            width: 1.85rem;
+            height: 1.85rem;
+        }
+
+        a path {
+            transition: $transition-1;
+        }
+
+        a:hover path {
+            fill: $yellow;
+        }
+    }
+}
