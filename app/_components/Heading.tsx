@@ -1,7 +1,5 @@
+import { montaguSlab } from "@/lib/fonts";
 import React from "react";
-import { Montagu_Slab } from "next/font/google";
-
-const montaguSlab = Montagu_Slab({ subsets: ["latin"] });
 
 interface HeadingProps {
     text: string;
