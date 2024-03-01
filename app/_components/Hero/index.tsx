@@ -3,15 +3,27 @@ import Image from "next/image";
 import subtract from "../../assets/subtract.svg";
 import add from "../../assets/Add.svg";
 import Heading from "../Heading";
+import { baseUrl } from "@/lib/data";
+import axios from "axios";
+import { Product } from "@/lib/types";
 
-function Hero() {
+async function getFeaturedProduct() {
+    const res = await axios.get(`${baseUrl}/api/products/featured`);
+    console.log(res.data);
+
+    return res.data;
+}
+
+async function Hero() {
+    const product: Product = await getFeaturedProduct();
+
     return (
         <section className="background hero ">
             <div className="container">
                 <article className="featuredProduct">
                     <div className="image">
                         <Image
-                            src="/barfi.jpg"
+                            src={product.image}
                             alt="Khushi ki Barfi"
                             fill
                             className="featuredProduct__image"
@@ -19,8 +31,10 @@ function Hero() {
                     </div>
 
                     <div className="featuredProduct__right">
-                        <Heading text="Khoya Barfi" />
-                        <span className="price">Rs. 1,100</span>
+                        <Heading text={product.name} />
+                        <span className="price">
+                            Rs. {product.price.toLocaleString("en-IN")}
+                        </span>
 
                         <span className="label">Weight</span>
 

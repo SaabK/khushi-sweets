@@ -1,15 +1,23 @@
+export const baseUrl =
+    typeof window !== "undefined"
+        ? `${window.location.origin}`
+        : "http://localhost:3000";
+
 export const products = [
     {
+        id: 1,
         name: "Khoya Barfi",
         price: 1100,
         image: "/barfi.jpg",
     },
     {
+        id: 2,
         name: "Gulab Jaman",
         price: 1150,
         image: "/gulab_jaman.jpg",
     },
     {
+        id: 3,
         name: "Almond Barfi",
         price: 1250,
         image: "/barfi.jpg",

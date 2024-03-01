@@ -23,3 +23,11 @@ export interface ICartItem {
     quantity: number;
     image: string;
 }
+
+// Redux
+
+export interface CartState {
+    items: ICartItem[];
+    amount: number;
+    total: number; // items quantity
+}
