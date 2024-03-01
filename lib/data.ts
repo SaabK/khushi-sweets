@@ -56,3 +56,20 @@ export const socials = [
         icon: "/whatsapp.svg",
     },
 ];
+
+export const cart = [
+    {
+        name: "Gulab Jaman",
+        price: 1150,
+        weight: 0.5,
+        image: "/gulab_jaman.jpg",
+        quantity: 3,
+    },
+    {
+        name: "Almond Barfi",
+        weight: 1,
+        price: 1250,
+        image: "/barfi.jpg",
+        quantity: 2,
+    },
+];

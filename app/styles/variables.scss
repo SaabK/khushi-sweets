@@ -1,5 +1,5 @@
 $section-padding: 4.5rem;
-$background-opacity: 0.81;
+$background-opacity: 0.85;
 $ff-heading: "Montagu Slab", serif;
 
 // Colors
@@ -10,3 +10,7 @@ $yellow: #ffd80d;
 // Transition
 
 $transition-1: all 0.5s ease;
+
+// Media Queries
+
+$mobile: 600px;

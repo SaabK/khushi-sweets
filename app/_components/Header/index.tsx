@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import shoppingCart from "../../assets/Shopping Cart.svg";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -11,15 +12,24 @@ export default function Header() {
                 </div>
 
                 <div className={`logo image`}>
-                    <Image
-                        src="/khushi sweets logo urdu.png"
-                        alt="Khushi Sweets"
-                        fill
-                    />
+                    <Link href="/">
+                        <Image
+                            src="/khushi sweets logo urdu.png"
+                            alt="Khushi Sweets"
+                            fill
+                        />
+                    </Link>
                 </div>
 
                 <div className={`shoppingCart`}>
-                    <Image src={shoppingCart} alt="" width={30} height={30} />
+                    <Link href="/cart">
+                        <Image
+                            src={shoppingCart}
+                            alt=""
+                            width={30}
+                            height={30}
+                        />
+                    </Link>
                 </div>
             </div>
         </header>

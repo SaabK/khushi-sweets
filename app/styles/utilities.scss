@@ -46,12 +46,16 @@
     margin-inline: auto;
 }
 
+.bg,
+.background {
+    padding-block: $section-padding !important;
+}
+
 .background {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center center !important;
 
-    padding-block: $section-padding !important;
     position: relative !important;
 
     h2 {
@@ -106,76 +110,53 @@
 .heading {
     color: $light-yellow;
     font-weight: 600;
-    font-size: 4rem;
-}
+    font-size: 3.25rem;
 
-.price {
-    font-size: 1.625rem;
-    color: $yellow;
-    font-weight: 500;
+    margin-bottom: 2rem;
     text-decoration: underline;
 }
 
-.weight,
-.options {
-    display: grid;
-    gap: 0.875rem;
-    margin-top: 1.35rem;
+.space-top {
+    margin-top: 1rem;
 }
 
-.weight {
-    grid-template-columns: repeat(2, 1fr);
-
-    button {
-        border-radius: 9999px;
-        font-family: $ff-heading;
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
+.round {
+    border-radius: 9999px;
 }
 
-.quantity {
-    background: $light-yellow;
-    width: 100%;
-    padding: 0.75rem 1.15rem;
+.tag {
+    padding: 0.45rem 1.25rem;
+    border-radius: 9999px;
+    background: $yellow;
+    color: black;
+    font-weight: 600;
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+.trash {
+    color: rgb(255, 48, 48);
+    cursor: pointer;
 
+    padding: 0.25rem;
+    width: 30px;
+    height: 30px;
     border-radius: 4px;
 
-    span {
-        font-size: 1.8rem;
-        font-family: $ff-heading;
-        font-weight: 400;
-        color: black;
-    }
+    transition: $transition-1;
 }
 
-.options {
-    button {
-        font-weight: 700;
-        text-transform: uppercase;
-        padding-inline: 2rem;
-    }
+.trash:hover {
+    background: rgba(255, 0, 0, 0.2718281828);
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobile) {
     .container {
         max-width: 500px;
         width: 92.5%;
     }
 
-    .background {
-        h2 {
-            margin-bottom: 0.5rem;
-        }
-    }
-
     .heading {
         font-size: 3rem;
+        margin-bottom: 1.25rem;
     }
 
     .btn {
@@ -183,12 +164,8 @@
         font-size: 0.8rem;
     }
 
-    .weight button {
-        font-size: 0.975rem;
-        padding: 0.4rem;
-    }
-
-    .weight > *:first-child {
-        order: 2;
+    .trash {
+        width: 27px;
+        height: 27px;
     }
 }

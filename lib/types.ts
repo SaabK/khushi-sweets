@@ -15,3 +15,11 @@ export interface Social {
     href: string;
     icon: string;
 }
+
+export interface ICartItem {
+    name: string;
+    price: number;
+    weight: number;
+    quantity: number;
+    image: string;
+}

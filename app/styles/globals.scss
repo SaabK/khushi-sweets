@@ -2,6 +2,8 @@
 
 @import "./variables.scss";
 @import "./utilities.scss";
+@import "./home.scss";
+@import "./cart.scss";
 
 *,
 *::before,
@@ -9,6 +11,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
 }
 
 img {
@@ -32,6 +44,9 @@ button:focus {
 .header {
     width: 100%;
     padding-block: 0.5rem;
+
+    // Why this? Because Image in the background
+
     position: absolute;
     z-index: 99;
     top: 0;
@@ -39,8 +54,8 @@ button:focus {
 }
 
 .logo {
-    width: 300px;
-    height: 70px;
+    width: 220px;
+    height: 54px;
 }
 
 .shoppingCart {
@@ -59,7 +74,8 @@ button:focus {
     content: "0";
     width: 1.2rem;
     height: 1.2rem;
-    background-color: white;
+    background-color: $yellow;
+    color: black;
 
     position: absolute;
     top: 8px;
@@ -71,164 +87,6 @@ button:focus {
 
     border-radius: 9999px;
     font-weight: bold;
-}
-
-// Hero Section
-
-.hero {
-    background: url("/background.jpg");
-    padding-top: 6.95rem !important;
-}
-
-.featuredProduct {
-    background: rgba($color: #000000, $alpha: 0.75);
-    border-radius: 10px;
-    padding: 2rem;
-    width: 85%;
-    margin-inline: auto;
-
-    display: flex;
-    gap: 3rem;
-
-    .image {
-        width: 430px;
-        height: 430px;
-    }
-
-    &__image {
-        border-radius: 4px;
-    }
-
-    h2 {
-        width: max-content;
-    }
-
-    .label {
-        font-weight: 400;
-        color: rgb(209, 209, 209);
-        display: block;
-        margin-top: 1.5rem;
-    }
-
-    &__right {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .quantity {
-        margin-top: 0.5rem;
-        width: fit-content;
-    }
-
-    .weight {
-        margin-top: 0.875rem;
-    }
-
-    .options {
-        margin-top: max(auto, 1rem);
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-// Products Section
-
-.products-section {
-    background: url("/background2.jpg");
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3.5rem;
-}
-
-.product {
-    padding: 1.65rem;
-    background: rgba($color: #000000, $alpha: 0.8);
-    border-radius: 6px;
-    color: white;
-
-    .image {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        margin-bottom: 1rem;
-
-        img {
-            border-radius: 6px;
-        }
-    }
-
-    h3 {
-        width: fit-content;
-        font-size: 2.25rem;
-        color: $light-yellow;
-        margin-bottom: 0.5rem;
-    }
-}
-
-// Testimonails Section
-
-.testimonials-section {
-    background: url("/background3.jpg");
-}
-
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 4rem;
-    column-gap: 2rem;
-
-    margin-top: 4rem;
-}
-
-.testimonial {
-    background: rgba($color: #0a0a07, $alpha: 0.8);
-    border-radius: 6px;
-    color: white;
-    font-size: 1.15rem;
-
-    padding: 2rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    border: 4px solid $yellow;
-
-    .image {
-        position: absolute;
-        left: 50%;
-        top: -30px;
-        transform: translateX(-50%);
-
-        width: 60px;
-        height: 60px;
-        border: 4px solid $yellow;
-        border-radius: 9999px;
-    }
-
-    p {
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    .name {
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 1rem;
-        color: yellow;
-        font-weight: bold;
-
-        margin-left: auto;
-        margin-top: 1rem;
-    }
-}
-
-.testimonial:first-child {
-    grid-column: 1 / 3;
-}
-
-.testimonial:last-child {
-    grid-column: 2 / 4;
 }
 
 // Footer
@@ -245,6 +103,7 @@ footer {
     ul {
         display: flex;
         gap: 0.75rem;
+        list-style-type: none;
 
         svg {
             display: block;
@@ -262,7 +121,7 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobile) {
     // Header
 
     .header {
@@ -272,66 +131,6 @@ footer {
     .logo {
         width: 230px;
         height: 55px;
-    }
-
-    // Hero Section
-
-    .featuredProduct {
-        flex-direction: column;
-        gap: 1rem;
-        width: 92%;
-
-        .image {
-            width: 100%;
-            height: 310px;
-        }
-
-        .quantity {
-            width: 100%;
-            margin-top: 0.75rem;
-
-            span {
-                font-size: 1.75rem;
-            }
-        }
-
-        .options {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .products {
-        gap: 1rem;
-        grid-template-columns: 1fr;
-        width: 80%;
-        margin-inline: auto;
-    }
-
-    .product {
-        padding: 1.25rem;
-
-        h3 {
-            font-size: 1.35rem;
-        }
-
-        .price {
-            font-size: 1.2rem;
-        }
-    }
-
-    // Testimonials
-
-    .testimonials {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .testimonial {
-        font-size: 1rem;
-    }
-
-    .testimonial:first-child,
-    .testimonial:last-child {
-        grid-column: auto;
     }
 
     footer {
