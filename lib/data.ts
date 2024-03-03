@@ -5,22 +5,25 @@ export const baseUrl =
 
 export const products = [
     {
-        id: 1,
         name: "Khoya Barfi",
-        price: 1100,
+        price: 600,
         image: "/barfi.jpg",
+        weight: 0.5,
+        isFeatured: false,
     },
     {
-        id: 2,
         name: "Gulab Jaman",
-        price: 1150,
+        price: 650,
         image: "/gulab_jaman.jpg",
+        weight: 0.5,
+        isFeatured: false,
     },
     {
-        id: 3,
         name: "Almond Barfi",
-        price: 1250,
+        price: 700,
         image: "/barfi.jpg",
+        weight: 0.5,
+        isFeatured: false,
     },
 ];
 
@@ -67,6 +70,7 @@ export const socials = [
 
 export const cart = [
     {
+        _id: 1,
         name: "Gulab Jaman",
         price: 1150,
         weight: 0.5,
@@ -74,6 +78,7 @@ export const cart = [
         quantity: 3,
     },
     {
+        _id: 2,
         name: "Almond Barfi",
         weight: 1,
         price: 1250,

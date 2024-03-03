@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import subtract from "../../assets/subtract.svg";
-import add from "../../assets/Add.svg";
+
 import Heading from "../Heading";
 import { baseUrl } from "@/lib/data";
 import axios from "axios";
 import { Product } from "@/lib/types";
+import QuantityOptions from "./QuantityOptions";
 
 async function getFeaturedProduct() {
     const res = await axios.get(`${baseUrl}/api/products/featured`);
@@ -46,37 +46,7 @@ async function Hero() {
                         </div>
 
                         <span className="label">Quantity</span>
-
-                        <div className="quantity">
-                            <button>
-                                <Image
-                                    src={subtract}
-                                    alt=""
-                                    width={32}
-                                    height={32}
-                                />
-                            </button>
-
-                            <span>1</span>
-
-                            <button>
-                                <Image
-                                    src={add}
-                                    alt=""
-                                    width={32}
-                                    height={32}
-                                />
-                            </button>
-                        </div>
-
-                        <div className="options">
-                            <button className="btn btn-primary">
-                                Add to cart
-                            </button>
-                            <button className="btn btn-secondary">
-                                Buy Now
-                            </button>
-                        </div>
+                        <QuantityOptions item={product} />
                     </div>
                 </article>
             </div>

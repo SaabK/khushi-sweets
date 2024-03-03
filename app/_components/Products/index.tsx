@@ -7,7 +7,10 @@ import { baseUrl } from "@/lib/data";
 
 async function getProducts() {
     const res = await axios.get(`${baseUrl}/api/products`);
-    return res.data;
+    const data = res.data;
+    const numberOfItems = data.length / 2;
+
+    return data.slice(0, numberOfItems);
 }
 
 export default async function Products() {

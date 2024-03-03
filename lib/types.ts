@@ -2,6 +2,9 @@ export interface Product {
     image: string;
     name: string;
     price: number;
+    weight: number;
+    _id: string;
+    isFeatured?: boolean;
 }
 
 export interface Testimonial {
@@ -16,18 +19,14 @@ export interface Social {
     icon: string;
 }
 
-export interface ICartItem {
-    name: string;
-    price: number;
-    weight: number;
+export interface CartItemType extends Product {
     quantity: number;
-    image: string;
 }
 
 // Redux
 
 export interface CartState {
-    items: ICartItem[];
+    items: CartItemType[];
     amount: number;
     total: number; // items quantity
 }

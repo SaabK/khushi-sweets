@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </span>
 
             <Weight />
-            <Options />
+            <Options item={product} />
         </article>
     );
 }

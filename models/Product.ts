@@ -8,6 +8,7 @@ const ProductSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    weight: Number,
 });
 
 const Product = models.Product || model("Product", ProductSchema);
